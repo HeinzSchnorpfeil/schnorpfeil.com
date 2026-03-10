@@ -804,11 +804,18 @@
         }
 
         // 4. Hero scroll button: slow smooth scroll to next section
+        // Note: We temporarily disable CSS scroll-behavior:smooth during this
+        // JS-driven animation to prevent the two smooth-scroll systems from
+        // fighting each other (which causes jitter/jank).
         const heroScrollBtn = document.getElementById('hero-scroll-btn');
         if (heroScrollBtn) {
             heroScrollBtn.addEventListener('click', () => {
                 const target = document.getElementById('leistungen');
                 if (!target) return;
+
+                // Disable CSS smooth scrolling so our rAF loop has full control
+                document.documentElement.style.scrollBehavior = 'auto';
+
                 const targetY = target.getBoundingClientRect().top + window.scrollY;
                 const startY = window.scrollY;
                 const diff = targetY - startY;
@@ -819,7 +826,12 @@
                     const elapsed = now - startTime;
                     const progress = Math.min(elapsed / duration, 1);
                     window.scrollTo(0, startY + diff * easeInOutCubic(progress));
-                    if (progress < 1) requestAnimationFrame(step);
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        // Re-enable CSS smooth scrolling for anchor links etc.
+                        document.documentElement.style.scrollBehavior = '';
+                    }
                 };
                 requestAnimationFrame(step);
             });
