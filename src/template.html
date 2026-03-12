@@ -418,17 +418,12 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-cpu group-hover:scale-110 transition-transform">
-                                <rect width="16" height="16" x="4" y="4" rx="2" />
-                                <rect width="6" height="6" x="9" y="9" rx="1" />
-                                <path d="M15 2v2" />
-                                <path d="M15 20v2" />
-                                <path d="M2 15h2" />
-                                <path d="M2 9h2" />
-                                <path d="M20 15h2" />
-                                <path d="M20 9h2" />
-                                <path d="M9 2v2" />
-                                <path d="M9 20v2" />
+                                class="lucide lucide-building-2 group-hover:scale-110 transition-transform">
+                                <path d="M10 12h4" />
+                                <path d="M10 8h4" />
+                                <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                                <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" />
+                                <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
                             </svg>
                         </div>
                         <h3 class="text-lg font-bold theme-heading uppercase tracking-wide mb-3">{{ vp_1_title }}</h3>
@@ -442,12 +437,11 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-crosshair group-hover:scale-110 transition-transform">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="22" x2="18" y1="12" y2="12" />
-                                <line x1="6" x2="2" y1="12" y2="12" />
-                                <line x1="12" x2="12" y1="6" y2="2" />
-                                <line x1="12" x2="12" y1="22" y2="18" />
+                                class="lucide lucide-users group-hover:scale-110 transition-transform">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                <circle cx="9" cy="7" r="4" />
                             </svg>
                         </div>
                         <h3 class="text-lg font-bold theme-heading uppercase tracking-wide mb-3">{{ vp_2_title }}</h3>
@@ -461,10 +455,13 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="lucide lucide-shield-check group-hover:scale-110 transition-transform">
-                                <path
-                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z" />
-                                <path d="m9 12 2 2 4-4" />
+                                class="lucide lucide-landmark group-hover:scale-110 transition-transform">
+                                <path d="M10 18v-7" />
+                                <path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z" />
+                                <path d="M14 18v-7" />
+                                <path d="M18 18v-7" />
+                                <path d="M3 22h18" />
+                                <path d="M6 18v-7" />
                             </svg>
                         </div>
                         <h3 class="text-lg font-bold theme-heading uppercase tracking-wide mb-3">{{ vp_3_title }}</h3>
@@ -626,95 +623,29 @@
                         </div>
                     </div>
 
-                    <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 200ms">
-                        <div
-                            class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
-                        </div>
-                        <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
-                            <div
-                                class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
-                                <img src="/logos/Linetech.svg" alt="Linetech"
-                                    style="--logo-max-h: 58%"
-                                    class="h-full w-auto max-w-full object-contain object-center md:object-left" />
-                            </div>
-                            <div
-                                class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
-                            </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">LINETECH GmbH & Co. KG</h4>
-                            <p
-                                class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
-                                {{ sub5_desc }}</p>
-                        </div>
-                        <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
-                            <a href="https://linetech.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
-                                hub_cta }}</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-slate-300 group-hover:text-primary transition-colors hidden md:block card-arrow">
-                                <path d="M7 7h10v10" />
-                                <path d="M7 17 17 7" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 250ms">
-                        <div
-                            class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
-                        </div>
-                        <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
-                            <div
-                                class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
-                                <img src="/logos/Benkelberg.svg" alt="Benkelberg"
-                                    class="h-full w-auto max-w-full object-contain object-center md:object-left" />
-                            </div>
-                            <div
-                                class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
-                            </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Baugesellschaft Gebr. Benkelberg & Co. GmbH</h4>
-                            <p
-                                class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
-                                {{ sub6_desc }}</p>
-                        </div>
-                        <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
-                            <a href="https://bauschuttdeponie.com/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
-                                hub_cta }}</a>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-slate-300 group-hover:text-primary transition-colors hidden md:block card-arrow">
-                                <path d="M7 7h10v10" />
-                                <path d="M7 17 17 7" />
-                            </svg>
-                        </div>
-                    </div>
-
+                    <!-- 5. VSB infra -->
                     <div class="js-reveal group flex flex-col theme-card ci-hover border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 0ms; --ci-accent: #FFCC00">
+                        style="transition-delay: 200ms; --ci-accent: #F47216">
                         <div
                             class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
                         </div>
                         <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
                             <div
                                 class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
-                                <img src="/logos/HSK.svg" alt="HSK"
-                                    style="--logo-max-h: 82%"
+                                <img src="/logos/VSB Infra.svg" alt="VSB Infra"
+                                    style="--logo-max-h: 78%"
                                     class="h-full w-auto max-w-full object-contain object-center md:object-left" />
                             </div>
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">HSK Fugen- und Betonsanierung GmbH & Co. KG</h4>
+                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">VSB infra GmbH &amp; Co. KG</h4>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
-                                {{ sub7_desc }}</p>
+                                {{ sub9_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
-                            <a href="https://hsk-fugen.de/" target="_blank" rel="noopener"
+                            <a href="https://vsb-infra.de/" target="_blank" rel="noopener"
                                 class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
@@ -727,8 +658,9 @@
                         </div>
                     </div>
 
+                    <!-- 6. InfraLine -->
                     <div class="js-reveal group flex flex-col theme-card ci-hover border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 50ms; --ci-accent: #3BD1FF">
+                        style="transition-delay: 250ms; --ci-accent: #3BD1FF">
                         <div
                             class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
                         </div>
@@ -760,28 +692,29 @@
                         </div>
                     </div>
 
+                    <!-- 7. HSK -->
                     <div class="js-reveal group flex flex-col theme-card ci-hover border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 100ms; --ci-accent: #F47216">
+                        style="transition-delay: 0ms; --ci-accent: #FFCC00">
                         <div
                             class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
                         </div>
                         <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
                             <div
                                 class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
-                                <img src="/logos/VSB Infra.svg" alt="VSB Infra"
-                                    style="--logo-max-h: 78%"
+                                <img src="/logos/HSK.svg" alt="HSK"
+                                    style="--logo-max-h: 82%"
                                     class="h-full w-auto max-w-full object-contain object-center md:object-left" />
                             </div>
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">VSB infra GmbH & Co. KG</h4>
+                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">HSK Fugen- und Betonsanierung GmbH &amp; Co. KG</h4>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
-                                {{ sub9_desc }}</p>
+                                {{ sub7_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
-                            <a href="https://vsb-infra.de/" target="_blank" rel="noopener"
+                            <a href="https://hsk-fugen.de/" target="_blank" rel="noopener"
                                 class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
@@ -794,8 +727,9 @@
                         </div>
                     </div>
 
+                    <!-- 8. Schnorpfeil Transport -->
                     <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 150ms">
+                        style="transition-delay: 50ms">
                         <div
                             class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
                         </div>
@@ -808,7 +742,7 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Transport GmbH & Co. KG</h4>
+                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Transport GmbH &amp; Co. KG</h4>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub10_desc }}</p>
@@ -827,8 +761,44 @@
                         </div>
                     </div>
 
+                    <!-- 9. LINETECH -->
                     <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
-                        style="transition-delay: 200ms">
+                        style="transition-delay: 100ms">
+                        <div
+                            class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
+                        </div>
+                        <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
+                            <div
+                                class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
+                                <img src="/logos/Linetech.svg" alt="Linetech"
+                                    style="--logo-max-h: 58%"
+                                    class="h-full w-auto max-w-full object-contain object-center md:object-left" />
+                            </div>
+                            <div
+                                class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
+                            </div>
+                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">LINETECH GmbH &amp; Co. KG</h4>
+                            <p
+                                class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
+                                {{ sub5_desc }}</p>
+                        </div>
+                        <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
+                            <a href="https://linetech.de/" target="_blank" rel="noopener"
+                                class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
+                                hub_cta }}</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-300 group-hover:text-primary transition-colors hidden md:block card-arrow">
+                                <path d="M7 7h10v10" />
+                                <path d="M7 17 17 7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 10. Der Saugbagger -->
+                    <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
+                        style="transition-delay: 150ms">
                         <div
                             class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
                         </div>
@@ -849,6 +819,40 @@
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://der-saugbagger.de/" target="_blank" rel="noopener"
+                                class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
+                                hub_cta }}</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-300 group-hover:text-primary transition-colors hidden md:block card-arrow">
+                                <path d="M7 7h10v10" />
+                                <path d="M7 17 17 7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- 11. Benkelberg -->
+                    <div class="js-reveal group flex flex-col theme-card border rounded-none shadow-sm relative overflow-hidden focus:outline-none focus:border-primary"
+                        style="transition-delay: 200ms">
+                        <div
+                            class="absolute left-0 bottom-0 h-[2px] w-0 bg-primary card-progress-bar group-hover:w-full transition-all duration-500 ease-in-out">
+                        </div>
+                        <div class="p-4 md:p-8 md:pt-10 flex-grow flex flex-col">
+                            <div
+                                class="logo-container h-10 md:h-14 w-full flex items-center justify-center md:justify-start mb-3 md:mb-8 relative">
+                                <img src="/logos/Benkelberg.svg" alt="Benkelberg"
+                                    class="h-full w-auto max-w-full object-contain object-center md:object-left" />
+                            </div>
+                            <div
+                                class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
+                            </div>
+                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Baugesellschaft Gebr. Benkelberg &amp; Co. GmbH</h4>
+                            <p
+                                class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
+                                {{ sub6_desc }}</p>
+                        </div>
+                        <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
+                            <a href="https://bauschuttdeponie.com/" target="_blank" rel="noopener"
                                 class="stretched-link text-primary font-bold text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors hidden md:inline">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
