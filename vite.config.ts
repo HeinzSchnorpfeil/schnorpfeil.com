@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'path'
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/schnorpfeil.com/' : '/',
+  base: '/',
   plugins: [
     tailwindcss(),
   ],
