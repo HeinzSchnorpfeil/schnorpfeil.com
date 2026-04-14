@@ -502,3 +502,43 @@ html {
 [data-theme="blue"] .theme-card:hover .card-arrow {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* ─── Gallery Strip ─── */
+
+/* Hardware acceleration to prevent image scaling jitter/lag */
+.gallery-item {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Gallery section theming */
+.gallery-section {
+  --gallery-bg: #0f172a;
+  background-color: var(--gallery-bg);
+  transition: background-color 0.5s ease;
+}
+
+[data-theme="blue"] .gallery-section {
+  --gallery-bg: #001a3a;
+}
+
+/* Gallery scrollbar hide (mobile swipe) */
+.gallery-container::-webkit-scrollbar { display: none; }
+.gallery-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Lightbox transitions */
+.gallery-lightbox {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-lightbox.is-open {
+  opacity: 1;
+}
+.gallery-lightbox img {
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gallery-lightbox.is-open img {
+  transform: scale(1);
+}
