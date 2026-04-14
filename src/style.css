@@ -527,11 +527,43 @@ html {
 .gallery-container::-webkit-scrollbar { display: none; }
 .gallery-container { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Lightbox transitions */
+/* Lightbox & Theming */
 .gallery-lightbox {
+  --lightbox-bg: rgba(255, 255, 255, 0.95);
+  --lightbox-text: #0f172a; /* slate-900 */
+  background-color: var(--lightbox-bg);
+  color: var(--lightbox-text);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.5s ease;
 }
+
+.gallery-lightbox::backdrop {
+  background-color: var(--lightbox-bg);
+  transition: background-color 0.5s ease;
+}
+
+.gallery-lightbox-close {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--lightbox-text);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.gallery-lightbox-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+/* Dark Mode Overrides */
+[data-theme="blue"] .gallery-lightbox {
+  --lightbox-bg: rgba(15, 23, 42, 0.95); /* slate-900 */
+  --lightbox-text: #ffffff;
+}
+[data-theme="blue"] .gallery-lightbox-close {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+[data-theme="blue"] .gallery-lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 .gallery-lightbox.is-open {
   opacity: 1;
 }
