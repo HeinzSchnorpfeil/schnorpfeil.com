@@ -1262,10 +1262,14 @@
 
     <!-- ANIMATION SCRIPT (V4: Counter + Scroll Reveals) -->
     <script>
-        // 0. Theme toggle (blue mode / Nachtschicht)
+        // 0. Theme toggle (blue mode / Nachtschicht) + System matchMedia
         (function () {
             const saved = localStorage.getItem('schnorpfeil-theme');
-            if (saved === 'blue') document.documentElement.setAttribute('data-theme', 'blue');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (saved === 'blue' || (!saved && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'blue');
+            }
         })();
         var updateToggle; // declared in outer scope for scroll handler access
         document.addEventListener('DOMContentLoaded', () => {
@@ -1323,6 +1327,23 @@
             updateToggle();
             if (toggle) toggle.addEventListener('click', toggleTheme);
             if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+
+            // Listen for live OS theme changes
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                    // Only auto-switch if user hasn't explicitly saved a preference
+                    if (!localStorage.getItem('schnorpfeil-theme')) {
+                        document.documentElement.setAttribute('data-theme-transitioning', '');
+                        if (event.matches) {
+                            document.documentElement.setAttribute('data-theme', 'blue');
+                        } else {
+                            document.documentElement.removeAttribute('data-theme');
+                        }
+                        updateToggle();
+                        setTimeout(() => document.documentElement.removeAttribute('data-theme-transitioning'), 600);
+                    }
+                });
+            }
         });
 
         // 1. Scroll reveal: fade-up on intersection
