@@ -437,6 +437,26 @@
             </button>
         </section>
 
+        <!-- COMPANY INTRO -->
+        <section id="ueber-uns-intro" class="pt-16 pb-8 md:pt-24 md:pb-12 theme-section relative">
+            <div class="max-w-7xl mx-auto px-6 js-reveal">
+                <h2 class="text-3xl lg:text-4xl font-black tracking-tighter theme-heading uppercase mb-8">
+                    {{ intro_title }}
+                </h2>
+                <div class="theme-text-muted w-full">
+                    <p class="text-sm md:text-base font-normal leading-relaxed mb-6">
+                        {{ intro_par1 }}
+                    </p>
+                    <p class="text-sm md:text-base font-normal leading-relaxed mb-8">
+                        {{ intro_par2 }}
+                    </p>
+                    <p class="text-base md:text-lg font-bold theme-heading leading-relaxed">
+                        {{ intro_par3 }}
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- VALUE PROPOSITIONS -->
         <section id="leistungen" class="py-12 md:py-24 theme-section relative">
             <div class="max-w-7xl mx-auto px-6">
@@ -1233,7 +1253,7 @@
         const heroScrollBtn = document.getElementById('hero-scroll-btn');
         if (heroScrollBtn) {
             heroScrollBtn.addEventListener('click', () => {
-                const target = document.getElementById('leistungen');
+                const target = document.getElementById('ueber-uns-intro');
                 if (!target) return;
 
                 // Disable CSS smooth scrolling so our rAF loop has full control
