@@ -17,6 +17,8 @@ dist-ssr
 /en/
 /pl/
 /ru/
+/impressum/
+/datenschutz/
 
 # Editor directories and files
 .vscode/*

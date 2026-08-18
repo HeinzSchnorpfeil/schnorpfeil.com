@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>{{ og_title }}</title>
+    <meta name="description" content="{{ meta_description }}" />
+    <!-- Google Search Snippet Meta -->
+    <meta name="thumbnail" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
+    <meta http-equiv="content-language" content="{{ lang }}" />
+    {{ seo_head }}
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ og_title }}" />
+    <meta property="og:description" content="{{ meta_description }}" />
+    <meta property="og:image" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="{{ lang }}" />
+    <meta property="og:site_name" content="Schnorpfeil Unternehmensgruppe" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ og_title }}" />
+    <meta name="twitter:description" content="{{ meta_description }}" />
+    <meta name="twitter:image" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
+    <!-- Font Preload -->
+    <link rel="preload" href="/fonts/OpenSans-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- JSON-LD: Organization + LocalBusiness + BreadcrumbList (GEO/AI-optimized) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["Organization", "Corporation"],
+          "@id": "https://schnorpfeil.com/#organization",
+          "name": "Schnorpfeil Unternehmensgruppe",
+          "alternateName": ["Schnorpfeil Group", "Schnorpfeil Gruppe", "Heinz Schnorpfeil Bau GmbH"],
+          "url": "https://schnorpfeil.com",
+          "logo": "https://schnorpfeil.com/logos/SchnorpfeilFilled.svg",
+          "image": "https://schnorpfeil.com/images/hero-header-og.jpg",
+          "description": "{{ schema_description }}",
+          "foundingDate": "1948",
+          "founder": {
+            "@type": "Person",
+            "name": "Heinz Schnorpfeil"
+          },
+          "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "minValue": 1000,
+            "unitText": "employees"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kastellauner Straße 51",
+            "addressLocality": "Treis-Karden",
+            "postalCode": "56253",
+            "addressRegion": "Rheinland-Pfalz",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.174665,
+            "longitude": 7.300582
+          },
+          "telephone": "+49-2672-69-0",
+          "email": "info@schnorpfeil.com",
+          "sameAs": [
+            "https://www.facebook.com/people/Heinz-Schnorpfeil-Bau/100085589364510/",
+            "https://de.linkedin.com/company/heinz-schnorpfeil-bau-gmbh",
+            "https://www.xing.com/pages/heinzschnorpfeilbaugmbh",
+            "https://www.instagram.com/schnorpfeil.bau/",
+            "https://www.youtube.com/@Schnorpfeil-Bau"
+          ],
+          "naics": "237310",
+          "isicV4": "4210",
+          "knowsAbout": [
+            "Straßenbau", "Ingenieurbau", "Erdbau", "Asphaltbau", "Betonbau",
+            "Spezialtiefbau", "Brückenbau", "Infrastrukturbau", "Baustoffgewinnung",
+            "Betonschutzwände", "Gleitformbau", "Fahrzeug-Rückhaltesysteme",
+            "Horizontalspülbohrungen", "Baustoffrecycling", "Baustellentransporte",
+            "Road construction", "Civil engineering", "Infrastructure construction",
+            "Bridge construction", "Concrete barriers", "Slipform construction"
+          ],
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 50.174665,
+              "longitude": 7.300582
+            },
+            "geoRadius": "300000"
+          },
+          "subOrganization": [
+            { "@type": "Organization", "name": "Heinz Schnorpfeil Bau GmbH", "url": "https://www.schnorpfeil.eu/", "description": "Straßenbau, Erdbau, Ingenieurbau, Asphalt- und Betonbau" },
+            { "@type": "Organization", "name": "WALLSTOP GmbH & Co. KG", "url": "https://www.wallstop.de/", "description": "Betonschutzwände, Gleitformbau, Verkehrssicherung" },
+            { "@type": "Organization", "name": "Schnorpfeil Rhein-Main GmbH & Co. KG", "url": "https://schnorpfeil-rhein-main.com/", "description": "Flughafenbau, Bahnbau, Energieinfrastruktur" },
+            { "@type": "Organization", "name": "Heinz Schnorpfeil Baustoff GmbH & Co. KG", "url": "https://moselgrauwacke.de/", "description": "Mosel-Grauwacke, Naturstein, Baustoffe" },
+            { "@type": "Organization", "name": "Linetech GmbH & Co. KG", "url": "https://linetech.de/", "description": "Forschung und Entwicklung von Fahrzeug-Rückhaltesystemen" },
+            { "@type": "Organization", "name": "Gebr. Benkelberg & Co. GmbH", "url": "https://bauschuttdeponie.com/", "description": "Baustoffrecycling und Deponie" },
+            { "@type": "Organization", "name": "HSK Fugen- u. Betonsanierung GmbH & Co. KG", "url": "https://hsk-fugen.de/", "description": "Fugenschneiden, Fugenverguss, Betonsanierung" },
+            { "@type": "Organization", "name": "InfraLine GmbH", "url": "https://infraline.de/", "description": "Horizontale Spülbohrungen, grabenlose Leitungsverlegung" },
+            { "@type": "Organization", "name": "VSB infra GmbH & Co. KG", "url": "https://vsb-infra.de/", "description": "Betonschutzwände, Stahlschutzsysteme, Gleitformbau" },
+            { "@type": "Organization", "name": "Schnorpfeil Transport GmbH & Co. KG", "url": "https://schnorpfeil-transport.de/", "description": "Baustellentransporte und Baustofflogistik" },
+            { "@type": "Organization", "name": "Der Saugbagger", "url": "https://der-saugbagger.de/", "description": "Materialabsaugung und Saugbagger-Dienstleistungen" }
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://schnorpfeil.com/#localbusiness",
+          "name": "Heinz Schnorpfeil Bau GmbH",
+          "image": "https://schnorpfeil.com/logos/SchnorpfeilFilled.svg",
+          "url": "https://schnorpfeil.com",
+          "vatID": "DE 218 643 108",
+          "telephone": "+49-2672-69-0",
+          "email": "info@schnorpfeil.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kastellauner Straße 51",
+            "addressLocality": "Treis-Karden",
+            "postalCode": "56253",
+            "addressRegion": "Rheinland-Pfalz",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 50.174665,
+            "longitude": 7.300582
+          },
+          "parentOrganization": { "@id": "https://schnorpfeil.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Schnorpfeil",
+              "item": "https://schnorpfeil.com{{ baseUrl }}"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "{{ legal_title }}",
+              "item": "https://schnorpfeil.com{{ pageUrl }}"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body class="antialiased font-sans selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <nav id="main-nav" class="fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 is-scrolled">
+        <div id="header-container"
+            class="max-w-7xl mx-auto px-6 flex items-center justify-between transition-all duration-300">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="{{ baseUrl }}" class="flex items-center transition-all duration-300">
+                    <img src="/logos/SchnorpfeilFilled.svg" alt="Schnorpfeil Logo" id="header-logo"
+                        class="w-auto object-contain transition-all duration-300" />
+                </a>
+                <div class="hidden sm:flex items-center ml-5">
+                    <div class="h-6 w-px bg-current opacity-20 nav-brand-text transition-colors duration-300"></div>
+                    <span
+                        class="nav-brand-text text-[0.85rem] font-bold tracking-[0.12em] uppercase transition-colors duration-300 ml-4">{{
+                        nav_brand_text }}</span>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4 sm:gap-6 text-sm font-medium">
+                <!-- Karriere (external) -->
+                <a href="https://schnorpfeil.eu/karriere/" target="_blank" rel="noopener"
+                    class="nav-link hidden sm:inline-flex items-center gap-1.5 text-[0.7rem] font-bold tracking-[0.1em] transition-colors uppercase border border-current rounded-none px-3 py-1.5 relative overflow-hidden group hover:!text-white hover:border-primary hover:!border-primary">
+                    <span class="relative z-10 flex items-center gap-1.5">
+                        {{ nav_career }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="opacity-80 group-hover:opacity-100 transition-opacity">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
+                        </svg>
+                    </span>
+                    <div
+                        class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0">
+                    </div>
+                </a>
+
+                <!-- Theme Toggle (Pill) -->
+                <button id="theme-toggle" class="hidden sm:flex items-center cursor-pointer rounded-none group relative"
+                    aria-label="Toggle blue mode" title="{{ theme_toggle_label }}" style="width: 56px; height: 28px;">
+                    <!-- Track -->
+                    <div id="theme-toggle-track" class="absolute inset-0 rounded-none transition-all duration-300"
+                        style="background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35);"></div>
+                    <!-- Sliding thumb with icon inside -->
+                    <div id="theme-toggle-dot"
+                        class="absolute top-[3px] left-[3px] w-[22px] h-[22px] rounded-none flex items-center justify-center transition-all duration-300 ease-in-out"
+                        style="z-index:2; background: rgba(255,255,255,0.95); box-shadow: 0 1px 4px rgba(0,0,0,0.15);">
+                        <!-- Sun icon inside thumb (light mode) -->
+                        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                            viewBox="0 0 24 24" fill="none" stroke="#00478A" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" class="transition-opacity duration-300">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2" />
+                            <path d="M12 20v2" />
+                            <path d="m4.93 4.93 1.41 1.41" />
+                            <path d="m17.66 17.66 1.41 1.41" />
+                            <path d="M2 12h2" />
+                            <path d="M20 12h2" />
+                            <path d="m6.34 17.66-1.41 1.41" />
+                            <path d="m19.07 4.93-1.41 1.41" />
+                        </svg>
+                        <!-- Hard hat icon inside thumb (blue mode) -->
+                        <svg id="theme-icon-hat" xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+                            viewBox="0 0 24 24" fill="none" stroke="#00478A" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" class="absolute transition-opacity duration-300 opacity-0">
+                            <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z" />
+                            <path d="M10 15V7a2 2 0 0 1 2-2v0a2 2 0 0 1 2 2v8" />
+                            <path d="M6 15v-2a6 6 0 0 1 12 0v2" />
+                        </svg>
+                    </div>
+                </button>
+
+                <!-- i18n switcher -->
+                <div class="hidden sm:flex items-center nav-link transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-globe nav-icon mr-2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg>
+                    <!-- SW_DE --><!-- END_SW_DE -->
+                    <!-- SW_EN --><!-- END_SW_EN -->
+                    <!-- SW_PL --><!-- END_SW_PL -->
+                    <!-- SW_RU --><!-- END_SW_RU -->
+                </div>
+                <a href="#kontakt"
+                    class="bg-primary hover:bg-primary-hover text-white px-5 py-2 rounded-none transition-colors text-xs font-bold uppercase tracking-widest hidden sm:inline-block theme-btn-primary">
+                    {{ nav_contact }}
+                </a>
+
+                <!-- Mobile Kontakt (Icon only or smaller on very small screens if needed, but we can just show it) -->
+                <a href="#kontakt"
+                    class="sm:hidden bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-none transition-colors text-xs font-bold uppercase tracking-widest theme-btn-primary">
+                    {{ nav_contact }}
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
+                    class="sm:hidden nav-link p-2 -mr-2 transition-colors flex items-center justify-center relative cursor-pointer z-50 hover:opacity-70"
+                    aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="nav-icon">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE OVERLAY MENU -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-40 theme-mobile-menu backdrop-blur-xl flex flex-col pt-24 px-6 pb-6 transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden">
+        <nav class="flex flex-col gap-6 text-xl font-bold uppercase tracking-widest">
+            <a href="https://schnorpfeil.eu/karriere/" target="_blank" rel="noopener"
+                class="flex items-center justify-between w-full border-b pb-4 theme-heading"
+                style="border-color: var(--theme-divider)">
+                <span>{{ nav_career }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="theme-text-muted">
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" />
+                </svg>
+            </a>
+
+            <!-- Mobile i18n switcher -->
+            <div class="flex items-center justify-between w-full border-b pb-4"
+                style="border-color: var(--theme-divider)">
+                <div class="flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-text-muted">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg>
+                    <span class="theme-text-muted text-sm">{{ mobile_language_label }}</span>
+                </div>
+                <div class="flex gap-4 theme-heading">
+                    <!-- SW_DE --><!-- END_SW_DE -->
+                    <!-- SW_EN --><!-- END_SW_EN -->
+                    <!-- SW_PL --><!-- END_SW_PL -->
+                    <!-- SW_RU --><!-- END_SW_RU -->
+                </div>
+            </div>
+
+            <!-- Mobile theme toggle -->
+            <button id="theme-toggle-mobile"
+                class="flex items-center justify-between w-full border-b pb-4 cursor-pointer"
+                style="border-color: var(--theme-divider)">
+                <div class="flex items-center gap-3">
+                    <svg id="mobile-theme-icon-hat" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="theme-text-muted">
+                        <path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2z" />
+                        <path d="M10 15V7a2 2 0 0 1 2-2v0a2 2 0 0 1 2 2v8" />
+                        <path d="M6 15v-2a6 6 0 0 1 12 0v2" />
+                    </svg>
+                    <svg id="mobile-theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="theme-text-muted hidden">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <span class="theme-text-muted text-sm normal-case tracking-normal font-normal">{{ theme_toggle_label
+                        }}</span>
+                </div>
+                <div id="mobile-theme-status" class="theme-heading text-sm font-bold" data-on="{{ toggle_on }}"
+                    data-off="{{ toggle_off }}">{{ toggle_off }}</div>
+            </button>
+        </nav>
+    </div>
+
+    <main class="flex-grow pt-24 md:pt-32 pb-16 md:pb-28 theme-section">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-3xl md:text-5xl font-black theme-heading uppercase mb-8 md:mb-12">{{ legal_title }}</h1>
+            <div class="theme-text-muted legal-content-wrapper text-sm md:text-base leading-relaxed space-y-6">
+                {{ legal_content }}
+            </div>
+        </div>
+    </main>
+
+    <footer id="kontakt" class="theme-footer text-white">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+                <!-- Col 1: Brand -->
+                <div class="flex flex-col">
+                    <h3 class="text-lg font-extrabold leading-tight mb-1">
+                        {{ footer_brand_title }}
+                    </h3>
+                    <p class="text-white/60 text-sm font-light mt-2">{{ footer_brand_slogan }}</p>
+                </div>
+
+                <!-- Col 2: Kontakt -->
+                <div class="flex flex-col">
+                    <h4 class="text-sm font-bold mb-4">{{ footer_kontakt_title }}</h4>
+                    <address class="not-italic text-white/70 text-sm leading-relaxed space-y-1">
+                        <p>Kastellauner Straße 51</p>
+                        <p>56253 Treis-Karden</p>
+                        <p class="mt-2">Tel: <a href="tel:+49267269-0" class="hover:text-white transition-colors">02672
+                                69 0</a></p>
+                        <p><a href="mailto:info@schnorpfeil.com"
+                                class="hover:text-white transition-colors">info@schnorpfeil.com</a></p>
+                    </address>
+                </div>
+
+                <!-- Col 3: Heinz Schnorpfeil Bau GmbH -->
+                <div class="flex flex-col">
+                    <h4 class="text-sm font-bold mb-4">Heinz Schnorpfeil Bau GmbH</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="https://schnorpfeil.eu/" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">{{ footer_link_startseite }}</a></li>
+                        <li><a href="https://schnorpfeil.eu/ueber-uns/" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">{{ footer_link_ueber_uns }}</a></li>
+                        <li><a href="https://schnorpfeil.eu/geschaeftsfelder/" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">{{ footer_link_geschaeftsfelder }}</a></li>
+                        <li><a href="https://schnorpfeil.eu/karriere/" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">{{ footer_link_karriere }}</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Service -->
+                <div class="flex flex-col">
+                    <h4 class="text-sm font-bold mb-4">{{ footer_service_title }}</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="https://schnorpfeil.mitarbeiterangebote.de/login" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">Corporate Benefits</a></li>
+                        <li><a href="https://mssv2.mascotsmartstore.com/Account/SignIn?ReturnUrl=%2f#!/Customer/Orders/0"
+                                target="_blank" rel="noopener" class="hover:text-white transition-colors">{{
+                                footer_link_arbeitskleidung }}</a></li>
+                        <li><a href="https://www.schnorpfeil-shop.de/startseite.html" target="_blank" rel="noopener"
+                                class="hover:text-white transition-colors">{{ footer_link_bekleidung }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/20">
+            <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <!-- Social Icons -->
+                <div class="flex items-center gap-5">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/people/Heinz-Schnorpfeil-Bau/100085589364510/" target="_blank"
+                        rel="noopener" aria-label="Facebook" class="text-white/60 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 1.09.049 1.592.145v3.243a9 9 0 0 0-.928-.046c-1.316 0-1.826.498-1.826 1.793v2.423h3.578l-.614 3.667h-2.964v8.128C18.862 23.028 23.001 18.005 23.001 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.875 10.35 9.101 11.618Z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://de.linkedin.com/company/heinz-schnorpfeil-bau-gmbh" target="_blank" rel="noopener"
+                        aria-label="LinkedIn" class="text-white/60 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <!-- XING -->
+                    <a href="https://www.xing.com/pages/heinzschnorpfeilbaugmbh" target="_blank" rel="noopener"
+                        aria-label="XING" class="text-white/60 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L3.169 13.89c-.09.182-.09.379 0 .529.087.142.26.218.473.218h3.435c.517 0 .752-.337.92-.659 0 0 2.408-4.288 2.494-4.443-.017-.025-2.393-4.183-2.393-4.183-.166-.321-.406-.612-.92-.612H3.648z" />
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/schnorpfeil.bau/" target="_blank" rel="noopener"
+                        aria-label="Instagram" class="text-white/60 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@Schnorpfeil-Bau" target="_blank" rel="noopener"
+                        aria-label="YouTube" class="text-white/60 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Impressum & Datenschutz -->
+                <div class="flex items-center gap-4 text-sm text-white/60">
+                    <a href="{{ baseUrl }}impressum/"
+                        class="hover:text-white transition-colors">
+                        {{ footer_impressum }}
+                    </a>
+                    <a href="{{ baseUrl }}datenschutz/"
+                        class="hover:text-white transition-colors">
+                        {{ footer_privacy }}
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-sm text-white/60">
+                    {{ footer_copyright }}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ANIMATION SCRIPT (V4: Counter + Scroll Reveals) -->
+    <script>
+        // 0. Theme toggle (blue mode / Nachtschicht) + System matchMedia
+        (function () {
+            const saved = localStorage.getItem('schnorpfeil-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (saved === 'blue' || (!saved && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'blue');
+            }
+        })();
+        var updateToggle; // declared in outer scope for scroll handler access
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('theme-toggle');
+            const toggleMobile = document.getElementById('theme-toggle-mobile');
+            const dot = document.getElementById('theme-toggle-dot');
+            const track = document.getElementById('theme-toggle-track');
+            const iconSun = document.getElementById('theme-icon-sun');
+            const iconHat = document.getElementById('theme-icon-hat');
+            const mIconSun = document.getElementById('mobile-theme-icon-sun');
+            const mIconHat = document.getElementById('mobile-theme-icon-hat');
+            const mStatus = document.getElementById('mobile-theme-status');
+
+            updateToggle = function () {
+                const isBlue = document.documentElement.getAttribute('data-theme') === 'blue';
+                const isScrolled = document.getElementById('main-nav').classList.contains('is-scrolled');
+                // Slide dot: 3px (light) to 31px (blue)
+                if (dot) dot.style.left = isBlue ? '31px' : '3px';
+                // Swap icon inside thumb
+                if (iconSun) iconSun.style.opacity = isBlue ? '0' : '1';
+                if (iconHat) iconHat.style.opacity = isBlue ? '1' : '0';
+                // Track background adapts
+                if (track) {
+                    if (isBlue) {
+                        track.style.background = 'rgba(255,255,255,0.22)';
+                        track.style.borderColor = 'rgba(255,255,255,0.4)';
+                    } else if (isScrolled) {
+                        track.style.background = 'rgba(0,71,138,0.10)';
+                        track.style.borderColor = 'rgba(0,71,138,0.18)';
+                    } else {
+                        track.style.background = 'rgba(255,255,255,0.18)';
+                        track.style.borderColor = 'rgba(255,255,255,0.35)';
+                    }
+                }
+                // Mobile
+                if (mIconSun) mIconSun.classList.toggle('hidden', !isBlue);
+                if (mIconHat) mIconHat.classList.toggle('hidden', isBlue);
+                if (mStatus) mStatus.textContent = isBlue ? (mStatus.dataset.on || 'AN') : (mStatus.dataset.off || 'AUS');
+            }
+
+            function toggleTheme() {
+                document.documentElement.setAttribute('data-theme-transitioning', '');
+                const isBlue = document.documentElement.getAttribute('data-theme') === 'blue';
+                if (isBlue) {
+                    document.documentElement.removeAttribute('data-theme');
+                    localStorage.setItem('schnorpfeil-theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'blue');
+                    localStorage.setItem('schnorpfeil-theme', 'blue');
+                }
+                updateToggle();
+                setTimeout(() => document.documentElement.removeAttribute('data-theme-transitioning'), 600);
+            }
+
+            updateToggle();
+            if (toggle) toggle.addEventListener('click', toggleTheme);
+            if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+
+            // Listen for live OS theme changes (Bulletproof SOTA with Safari fallback)
+            if (window.matchMedia) {
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                const handleOsThemeChange = (event) => {
+                    // Forcefully override: If the user changes their OS theme live, 
+                    // we assume they want the system to take control again.
+                    localStorage.removeItem('schnorpfeil-theme');
+                    
+                    document.documentElement.setAttribute('data-theme-transitioning', '');
+                    if (event.matches) {
+                        document.documentElement.setAttribute('data-theme', 'blue');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                    }
+                    if (typeof updateToggle === 'function') updateToggle();
+                    setTimeout(() => document.documentElement.removeAttribute('data-theme-transitioning'), 600);
+                };
+
+                if (mediaQuery.addEventListener) {
+                    mediaQuery.addEventListener('change', handleOsThemeChange);
+                } else {
+                    // Fallback for older Safari/iOS
+                    mediaQuery.addListener(handleOsThemeChange);
+                }
+            }
+        });
+
+        // 1. Scroll reveal: fade-up on intersection
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('js-revealed');
+                    // Clean up inline stagger delay so it doesn't affect hover transitions
+                    entry.target.addEventListener('transitionend', function handler() {
+                        entry.target.style.transitionDelay = '';
+                        entry.target.removeEventListener('transitionend', handler);
+                    }, { once: true });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+        document.querySelectorAll('.js-reveal').forEach(el => observer.observe(el));
+
+        // 1.5 Header scroll transition & Mobile Menu State (Static Scrolled for Legal Pages)
+        const mainNav = document.getElementById('main-nav');
+        let mobileMenuOpen = false;
+
+        // Ensure is-scrolled is permanently active on legal pages
+        mainNav.classList.add('is-scrolled');
+        if (typeof updateToggle === 'function') updateToggle();
+
+        // 3. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuOpen = !mobileMenuOpen;
+
+                if (mobileMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    document.body.style.overflow = 'hidden';
+
+                    // Change to Close (X) icon
+                    mobileMenuBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+                } else {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+
+                    // Change to Hamburger icon
+                    mobileMenuBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>';
+                }
+            });
+
+            // Close mobile menu when clicking anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenuOpen) mobileMenuBtn.click();
+                });
+            });
+        }
+
+    </script>
+</body>
+
+</html>

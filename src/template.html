@@ -10,18 +10,14 @@
     <!-- Google Search Snippet Meta -->
     <meta name="thumbnail" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
     <meta http-equiv="content-language" content="{{ lang }}" />
-    <!-- Canonical & Hreflang -->
-    <link rel="canonical" href="https://schnorpfeil.com{{ baseUrl }}" />
-    <link rel="alternate" hreflang="de" href="https://schnorpfeil.com/" />
-    <link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/" />
-    <link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/" />
-    <link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/" />
-    <link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/" />
+    <!-- LCP Preload -->
+    <link rel="preload" href="/images/hero-header.webp" as="image" type="image/webp" fetchpriority="high" />
+    
+    {{ seo_head }}
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ og_title }}" />
     <meta property="og:description" content="{{ meta_description }}" />
-    <meta property="og:url" content="https://schnorpfeil.com{{ baseUrl }}" />
     <meta property="og:image" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -32,8 +28,10 @@
     <meta name="twitter:title" content="{{ og_title }}" />
     <meta name="twitter:description" content="{{ meta_description }}" />
     <meta name="twitter:image" content="https://schnorpfeil.com/images/hero-header-og.jpg" />
+    <!-- Font Preload -->
+    <link rel="preload" href="/fonts/OpenSans-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <!-- Tailwind CSS -->
-    <link href="/src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
     <!-- JSON-LD: Organization + LocalBusiness + BreadcrumbList (GEO/AI-optimized) -->
     <script type="application/ld+json">
     {
@@ -47,7 +45,7 @@
           "url": "https://schnorpfeil.com",
           "logo": "https://schnorpfeil.com/logos/SchnorpfeilFilled.svg",
           "image": "https://schnorpfeil.com/images/hero-header-og.jpg",
-          "description": "Familiengeführte Unternehmensgruppe im Infrastrukturbau seit 1948. Straßenbau, Ingenieurbau, Erdbau, Asphalt- und Betonbau, Spezialtiefbau und Baustofflogistik aus einer Hand.",
+          "description": "{{ schema_description }}",
           "foundingDate": "1948",
           "founder": {
             "@type": "Person",
@@ -119,6 +117,7 @@
           "name": "Heinz Schnorpfeil Bau GmbH",
           "image": "https://schnorpfeil.com/logos/SchnorpfeilFilled.svg",
           "url": "https://schnorpfeil.com",
+          "vatID": "DE 218 643 108",
           "telephone": "+49-2672-69-0",
           "email": "info@schnorpfeil.com",
           "address": {
@@ -135,17 +134,6 @@
             "longitude": 7.300582
           },
           "parentOrganization": { "@id": "https://schnorpfeil.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Schnorpfeil",
-              "item": "https://schnorpfeil.com{{ baseUrl }}"
-            }
-          ]
         }
       ]
     }
@@ -158,26 +146,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Was macht die Schnorpfeil Unternehmensgruppe?",
+          "name": "{{ faq_q1 }}",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die Schnorpfeil Unternehmensgruppe ist ein familiengeführtes Bauunternehmen mit Sitz in Treis-Karden (Rheinland-Pfalz), gegründet 1948. Mit über 1.000 Mitarbeitern und 11 Tochterunternehmen deckt die Gruppe das gesamte Spektrum des Infrastrukturbaus ab: Straßenbau, Ingenieurbau, Erdbau, Asphalt- und Betonbau, Betonschutzwände, Gleitformbau, Fahrzeug-Rückhaltesysteme, Horizontalspülbohrungen, Baustoffgewinnung, Baustoffrecycling und Baustellentransporte."
+            "text": "{{ faq_a1 }}"
           }
         },
         {
           "@type": "Question",
-          "name": "Welche Tochterunternehmen gehören zur Schnorpfeil Gruppe?",
+          "name": "{{ faq_q2 }}",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Zur Unternehmensgruppe gehören: Heinz Schnorpfeil Bau GmbH, WALLSTOP GmbH & Co. KG, Schnorpfeil Rhein-Main GmbH & Co. KG, Heinz Schnorpfeil Baustoff GmbH & Co. KG (Mosel-Grauwacke), LINETECH GmbH & Co. KG, Baugesellschaft Gebr. Benkelberg & Co. GmbH, HSK Fugen- und Betonsanierung GmbH & Co. KG, InfraLine GmbH, VSB infra GmbH & Co. KG, Schnorpfeil Transport GmbH & Co. KG und Der Saugbagger."
+            "text": "{{ faq_a2 }}"
           }
         },
         {
           "@type": "Question",
-          "name": "Wo ist die Schnorpfeil Gruppe tätig?",
+          "name": "{{ faq_q3 }}",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die Schnorpfeil Gruppe hat ihren Hauptsitz in Treis-Karden an der Mosel und ist schwerpunktmäßig in Rheinland-Pfalz, Nordrhein-Westfalen, Hessen und dem Saarland tätig. Über die Tochtergesellschaft Schnorpfeil Rhein-Main wird auch die Metropolregion Frankfurt/Rhein-Main bedient. Projektbezogen ist die Gruppe bundesweit und international aktiv."
+            "text": "{{ faq_a3 }}"
           }
         }
       ]
@@ -270,6 +258,8 @@
                     </svg>
                     <!-- SW_DE --><!-- END_SW_DE -->
                     <!-- SW_EN --><!-- END_SW_EN -->
+                    <!-- SW_PL --><!-- END_SW_PL -->
+                    <!-- SW_RU --><!-- END_SW_RU -->
                 </div>
                 <a href="#kontakt"
                     class="bg-primary hover:bg-primary-hover text-white px-5 py-2 rounded-none transition-colors text-xs font-bold uppercase tracking-widest hidden sm:inline-block theme-btn-primary">
@@ -283,7 +273,7 @@
                 </a>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-btn"
+                <button id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu"
                     class="sm:hidden nav-link p-2 -mr-2 transition-colors flex items-center justify-center relative cursor-pointer z-50 hover:opacity-70"
                     aria-label="Menu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -330,6 +320,8 @@
                 <div class="flex gap-4 theme-heading">
                     <!-- SW_DE --><!-- END_SW_DE -->
                     <!-- SW_EN --><!-- END_SW_EN -->
+                    <!-- SW_PL --><!-- END_SW_PL -->
+                    <!-- SW_RU --><!-- END_SW_RU -->
                 </div>
             </div>
 
@@ -555,14 +547,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Heinz Schnorpfeil Bau GmbH</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Heinz Schnorpfeil Bau GmbH</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub1_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://www.schnorpfeil.eu/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -589,14 +581,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">WALLSTOP GmbH & Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">WALLSTOP GmbH & Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub2_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://www.wallstop.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -622,14 +614,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Rhein-Main GmbH & Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Rhein-Main GmbH & Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub3_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://schnorpfeil-rhein-main.com/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -656,14 +648,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Heinz Schnorpfeil Baustoff GmbH & Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Heinz Schnorpfeil Baustoff GmbH & Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub4_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://moselgrauwacke.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -691,14 +683,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">VSB infra GmbH &amp; Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">VSB infra GmbH &amp; Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub9_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://vsb-infra.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -725,14 +717,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">InfraLine GmbH</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">InfraLine GmbH</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub8_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://infraline.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -760,14 +752,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">HSK Fugen- und Betonsanierung GmbH &amp; Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">HSK Fugen- und Betonsanierung GmbH &amp; Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub7_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://hsk-fugen.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -794,14 +786,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Transport GmbH &amp; Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Schnorpfeil Transport GmbH &amp; Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub10_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://schnorpfeil-transport.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -829,14 +821,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">LINETECH GmbH &amp; Co. KG</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">LINETECH GmbH &amp; Co. KG</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub5_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://linetech.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -864,14 +856,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Der Saugbagger</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Der Saugbagger</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub11_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://der-saugbagger.de/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -898,14 +890,14 @@
                             <div
                                 class="h-px w-8 theme-divider-line mb-2 md:mb-4 group-hover:bg-primary transition-colors duration-300 mx-auto md:mx-0">
                             </div>
-                            <h4 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Baugesellschaft Gebr. Benkelberg &amp; Co. GmbH</h4>
+                            <h3 class="theme-heading text-xs md:text-sm font-bold tracking-wide mb-1 md:mb-3 text-center md:text-left">Baugesellschaft Gebr. Benkelberg &amp; Co. GmbH</h3>
                             <p
                                 class="theme-text-muted font-medium text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none text-center md:text-left">
                                 {{ sub6_desc }}</p>
                         </div>
                         <div class="px-4 pb-2 md:px-8 md:pb-8 flex items-center justify-between mt-auto">
                             <a href="https://bauschuttdeponie.com/" target="_blank" rel="noopener"
-                                class="stretched-link text-primary font-bold text-[0px] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
+                                class="stretched-link text-primary font-bold text-[0.65rem] md:text-[0.65rem] uppercase tracking-widest hover:text-slate-900 transition-colors">{{
                                 hub_cta }}</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -929,39 +921,39 @@
                 <!-- Track 1 (Original) -->
                 <div class="gallery-track flex flex-nowrap shrink-0">
                     <!-- Items -->
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-bauunternehmen-betonbau-treis-karden-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Bauunternehmen – Moderner Beton- und Ingenieurbau in Treis-Karden" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-infrastruktur-strassenbau-autobahn-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Infrastruktur – Professioneller Straßenbau und Fahrbahnsanierung" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Großprojekt Flughafen Frankfurt – Tiefbau und Infrastruktur durch Schnorpfeil" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Original Mosel-Grauwacke Naturstein aus den Schnorpfeil Steinbrüchen" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="HSK Bodenrecycling und Bauschuttablagerung – Umweltgerechte Baustoffe" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Infraline – Präzise Spülbohrtechnik und grabenloser Rohrleitungsbau" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-infraline-spezialtiefbau-maschine-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Hochmoderne Maschinen im Spezialtiefbau – Infraline von Schnorpfeil" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Baustoffgewinnung – Eigener Steinbruch in Rheinland-Pfalz" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp')" title="Bild vergrößern">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp');}" title="Bild vergrößern">
                         <img src="/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Wallstop Betonschutzwände – Maximale Verkehrssicherheit für Autobahnen" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
@@ -970,39 +962,39 @@
                 <!-- Track 2 (Duplicate for seamless Marquee) -->
                 <div class="gallery-track flex flex-nowrap shrink-0" aria-hidden="true">
                     <!-- Items Duplicated -->
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-bauunternehmen-betonbau-treis-karden.webp');}">
                         <img src="/images/schnorpfeil-bauunternehmen-betonbau-treis-karden-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Bauunternehmen – Moderner Beton- und Ingenieurbau in Treis-Karden" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infrastruktur-strassenbau-autobahn.webp');}">
                         <img src="/images/schnorpfeil-infrastruktur-strassenbau-autobahn-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Infrastruktur – Professioneller Straßenbau und Fahrbahnsanierung" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau.webp');}">
                         <img src="/images/schnorpfeil-grossprojekt-flughafen-frankfurt-tiefbau-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Großprojekt Flughafen Frankfurt – Tiefbau und Infrastruktur durch Schnorpfeil" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel.webp');}">
                         <img src="/images/schnorpfeil-naturstein-grauwacke-steinbruch-mosel-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Original Mosel-Grauwacke Naturstein aus den Schnorpfeil Steinbrüchen" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie.webp');}">
                         <img src="/images/schnorpfeil-hsk-bodenrecycling-bauschutt-deponie-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="HSK Bodenrecycling und Bauschuttablagerung – Umweltgerechte Baustoffe" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau.webp');}">
                         <img src="/images/schnorpfeil-infraline-spuelbohrtechnik-tiefbau-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Infraline – Präzise Spülbohrtechnik und grabenloser Rohrleitungsbau" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-infraline-spezialtiefbau-maschine.webp');}">
                         <img src="/images/schnorpfeil-infraline-spezialtiefbau-maschine-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Hochmoderne Maschinen im Spezialtiefbau – Infraline von Schnorpfeil" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz.webp');}">
                         <img src="/images/schnorpfeil-baustoffe-steinbruch-rheinland-pfalz-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Schnorpfeil Baustoffgewinnung – Eigener Steinbruch in Rheinland-Pfalz" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
-                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" onclick="openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp')">
+                    <div class="gallery-item shrink-0 w-[85vw] sm:w-[50vw] md:w-[35vw] lg:w-[25vw] overflow-hidden relative cursor-pointer group/item" role="button" tabindex="0" onclick="openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox('/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit.webp');}">
                         <img src="/images/schnorpfeil-wallstop-betonschutzwaende-verkehrssicherheit-thumb.webp" decoding="async" class="h-56 sm:h-64 md:h-80 w-full object-cover transition-transform duration-500 group-hover/item:scale-105 pointer-events-none" alt="Wallstop Betonschutzwände – Maximale Verkehrssicherheit für Autobahnen" loading="lazy" />
                         <div class="absolute inset-0 bg-black/20 group-hover/item:bg-transparent transition-colors duration-300 pointer-events-none"></div>
                     </div>
@@ -1040,8 +1032,29 @@
         // Mobile Drift
         let isMobileTouching = false;
         let mobileScrollAccumulator = 0;
+        let isMarqueeVisible = false;
+        let marqueeAnimationId = null;
+
+        const marqueeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isMarqueeVisible = entry.isIntersecting;
+                if (isMarqueeVisible && !marqueeAnimationId) {
+                    marqueeAnimationId = marqueeAnimationId = requestAnimationFrame(renderMarquee);
+                } else if (!isMarqueeVisible && marqueeAnimationId) {
+                    cancelAnimationFrame(marqueeAnimationId);
+                    marqueeAnimationId = null;
+                }
+            });
+        }, { threshold: 0 });
+
+        const impressionenSection = document.getElementById('impressionen');
+        if (impressionenSection) marqueeObserver.observe(impressionenSection);
 
         function renderMarquee() {
+            if (!isMarqueeVisible) {
+                marqueeAnimationId = null;
+                return;
+            }
             if (window.innerWidth >= 768 && galleryTracks.length >= 2) {
                 // Desktop: Translate3d Animation
                 currentMarqueeSpeed += (targetMarqueeSpeed - currentMarqueeSpeed) * 0.05;
@@ -1247,10 +1260,16 @@
                 </div>
 
                 <!-- Impressum & Datenschutz -->
-                <a href="https://schnorpfeil.eu/common/info/impressum-und-datenschutzerklaerung.html" target="_blank" rel="noopener"
-                    class="text-sm text-white/60 hover:text-white transition-colors">
-                    {{ footer_impressum }}
-                </a>
+                <div class="flex items-center gap-4 text-sm text-white/60">
+                    <a href="{{ baseUrl }}impressum/"
+                        class="hover:text-white transition-colors">
+                        {{ footer_impressum }}
+                    </a>
+                    <a href="{{ baseUrl }}datenschutz/"
+                        class="hover:text-white transition-colors">
+                        {{ footer_privacy }}
+                    </a>
+                </div>
 
                 <!-- Copyright -->
                 <div class="text-sm text-white/60">

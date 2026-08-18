@@ -574,3 +574,48 @@ html {
 .gallery-lightbox.is-open img {
   transform: scale(1);
 }
+
+/* ─── Legal Pages Typography ─── */
+.legal-content-wrapper h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--theme-section-heading);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legal-content-wrapper p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.legal-content-wrapper strong {
+  font-weight: 700;
+  color: var(--theme-text);
+}
+
+.legal-content-wrapper a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 71, 138, 0.4);
+  text-underline-offset: 4px;
+  transition: all 0.3s ease;
+}
+
+.legal-content-wrapper a:hover {
+  text-decoration-color: var(--color-primary);
+  color: var(--color-primary-hover);
+}
+
+[data-theme="blue"] .legal-content-wrapper a {
+  color: #60a5fa; /* slate-400 or lighter blue */
+  text-decoration-color: rgba(96, 165, 250, 0.4);
+}
+
+[data-theme="blue"] .legal-content-wrapper a:hover {
+  text-decoration-color: #60a5fa;
+  color: #93c5fd;
+}

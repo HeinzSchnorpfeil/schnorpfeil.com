@@ -1,48 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://www.schnorpfeil.com/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.schnorpfeil.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.schnorpfeil.com/en/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://www.schnorpfeil.com/pl/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.schnorpfeil.com/ru/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.schnorpfeil.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://schnorpfeil.com/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/" />
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.schnorpfeil.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.schnorpfeil.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.schnorpfeil.com/en/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://www.schnorpfeil.com/pl/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.schnorpfeil.com/ru/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.schnorpfeil.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://schnorpfeil.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/" />
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.schnorpfeil.com/pl/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.schnorpfeil.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.schnorpfeil.com/en/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://www.schnorpfeil.com/pl/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.schnorpfeil.com/ru/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.schnorpfeil.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://schnorpfeil.com/pl/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/" />
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.schnorpfeil.com/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.schnorpfeil.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.schnorpfeil.com/en/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://www.schnorpfeil.com/pl/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://www.schnorpfeil.com/ru/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.schnorpfeil.com/" />
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://schnorpfeil.com/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/" />
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Impressum -->
+  <url>
+    <loc>https://schnorpfeil.com/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/impressum/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/impressum/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/impressum/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/impressum/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/en/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/impressum/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/impressum/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/impressum/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/impressum/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/pl/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/impressum/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/impressum/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/impressum/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/impressum/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/ru/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/impressum/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/impressum/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/impressum/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/impressum/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Datenschutz -->
+  <url>
+    <loc>https://schnorpfeil.com/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/datenschutz/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/en/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/datenschutz/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/pl/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/datenschutz/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://schnorpfeil.com/ru/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schnorpfeil.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schnorpfeil.com/en/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://schnorpfeil.com/pl/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://schnorpfeil.com/ru/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schnorpfeil.com/datenschutz/" />
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
