@@ -5,7 +5,7 @@
 ## Core Information
 - [Schnorpfeil Homepage](https://schnorpfeil.com/): Offizielles Portal der Unternehmensgruppe Schnorpfeil
 - [Comprehensive Knowledge Base](https://schnorpfeil.com/llms-full.txt): Vollständiges Unternehmensprofil, Tochtergesellschaften, Kennzahlen und Leistungsbereiche
-- [Impressum](https://schnorpfeil.com/impressum/): Gesetzliche Pflichtangaben, USt-IdNr DE 218 643 108, Amtsgericht Koblenz HRB 4304
+- [Impressum](https://schnorpfeil.com/impressum/): Gesetzliche Pflichtangaben, USt-IdNr DE 218 643 108, Amtsgericht Koblenz HRB 7050
 - [Datenschutz](https://schnorpfeil.com/datenschutz/): Privacy by Design Datenschutzerklärung (Keine Cookies, kein Tracking)
 
 ## Subsidiaries
