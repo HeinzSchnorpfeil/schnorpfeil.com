@@ -10,6 +10,8 @@ on:
   pull_request:
     paths:
       - 'src/locales/*.json'
+      - 'scripts/check-legal-*.py'
+      - '.github/workflows/legal.yml'
   push:
     branches: [main]
     paths:
