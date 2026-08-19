@@ -1,26 +1,33 @@
 User-agent: *
-Allow: /
+Disallow:
 
 # GEO / AI Crawlers & Agents
 # LLMs Knowledge Base: https://schnorpfeil.com/llms.txt
 User-agent: GPTBot
-Allow: /
+Disallow:
+
 User-agent: ChatGPT-User
-Allow: /
+Disallow:
+
 User-agent: ClaudeBot
-Allow: /
+Disallow:
+
 User-agent: Claude-Web
-Allow: /
+Disallow:
+
 User-agent: PerplexityBot
-Allow: /
+Disallow:
+
 User-agent: Google-Extended
-Allow: /
+Disallow:
+
 User-agent: Applebot-Extended
-Allow: /
+Disallow:
+
 User-agent: Amazonbot
-Allow: /
+Disallow:
+
 User-agent: Meta-ExternalAgent
-Allow: /
+Disallow:
 
 Sitemap: https://schnorpfeil.com/sitemap.xml
-Host: schnorpfeil.com
