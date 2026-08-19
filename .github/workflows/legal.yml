@@ -1,0 +1,48 @@
+name: Legal pages
+
+# Das "Stand"-Datum wird bewusst NICHT automatisch gesetzt. Es sagt aus, wann
+# zuletzt jemand die Texte geprüft hat — ein mitlaufendes Datum würde eine
+# Prüfung behaupten, die nie stattgefunden hat. Stattdessen wird hier erzwungen,
+# dass es bei inhaltlichen Änderungen von Hand gezogen wird, und regelmäßig
+# geprüft, ob die verlinkten Ziele noch existieren.
+
+on:
+  pull_request:
+    paths:
+      - 'src/locales/*.json'
+  push:
+    branches: [main]
+    paths:
+      - 'src/locales/*.json'
+  schedule:
+    # Quartalsweise: 1. Januar, April, Juli, Oktober um 06:00 UTC.
+    # Keine Rechtspflicht, sondern Vorsorge gegen tote Links und
+    # weggefallene Rechtsgrundlagen.
+    - cron: '0 6 1 1,4,7,10 *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stand:
+    name: Stand mitgezogen?
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Datum gegen Inhaltsänderung prüfen
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: python3 scripts/check-legal-stand.py "$BASE_SHA" "${{ github.sha }}"
+
+  links:
+    name: Verlinkte Ziele erreichbar?
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Links in Impressum und Datenschutz prüfen
+        run: python3 scripts/check-legal-links.py
